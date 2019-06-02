@@ -1,6 +1,7 @@
 package day03;
 
-public class Cell {
+
+public class Cell implements Comparable<Cell>{
     int x;
     int y;
 
@@ -32,5 +33,20 @@ public class Cell {
 
     }
 
+    /**
+     * f返回值不关注具体的值，只关注取值范围
+     * 返回值<0 :当前的对象比给定的对象小
+     * 返回值=0 :两个对象相等
+     * 返回值>0 :当前的对象比给定的对象大
+     * @param o
+     * @return
+     */
+
+    public int compareTo(Cell o){
+
+        return this.y - o.y;
+    }
 
 }
+
+
